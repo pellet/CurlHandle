@@ -17,6 +17,16 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CE885B260EF08D5200B6E545 /* curl.icns in Resources */ = {isa = PBXBuildFile; fileRef = CE885B250EF08D5200B6E545 /* curl.icns */; };
+		EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */; };
+		EB15743F16D27F6700E3A727 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EB15744016D27F6700E3A727 /* FindPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C0CF209D9BEBF00FE334E /* FindPanel.nib */; };
+		EB15744116D27F6700E3A727 /* curl.icns in Resources */ = {isa = PBXBuildFile; fileRef = CE885B250EF08D5200B6E545 /* curl.icns */; };
+		EB15744316D27F6700E3A727 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		EB15744416D27F6700E3A727 /* NSData+plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C0CEA09D9BEAF00FE334E /* NSData+plist.m */; };
+		EB15744516D27F6700E3A727 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C0CEC09D9BEAF00FE334E /* TestController.m */; };
+		EB15744616D27F6700E3A727 /* TextFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C0CEE09D9BEAF00FE334E /* TextFinder.m */; };
+		EB15744816D27F6700E3A727 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EB15744916D27F6700E3A727 /* CURLHandle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,13 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = CURLHandle;
 		};
+		EB15743B16D27F6700E3A727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27456A0014C4756F008ADF9F /* CURLHandle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = CURLHandle;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +61,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2F7C0D7F09D9C06B00FE334E /* CURLHandle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB15743C16D27F6700E3A727 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +98,7 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CURLHandleTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CURLHandleTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE885B250EF08D5200B6E545 /* curl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = curl.icns; sourceTree = "<group>"; };
+		EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleTester copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +108,15 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				2F7C0D7C09D9C06900FE334E /* CURLHandle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB15744716D27F6700E3A727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB15744816D27F6700E3A727 /* Cocoa.framework in Frameworks */,
+				EB15744916D27F6700E3A727 /* CURLHandle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* CURLHandleTester.app */,
+				EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +245,26 @@
 			productReference = 8D1107320486CEB800E47090 /* CURLHandleTester.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EB15743916D27F6700E3A727 /* CURLHandleUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests" */;
+			buildPhases = (
+				EB15743C16D27F6700E3A727 /* Copy Frameworks */,
+				EB15743E16D27F6700E3A727 /* Resources */,
+				EB15744216D27F6700E3A727 /* Sources */,
+				EB15744716D27F6700E3A727 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB15743A16D27F6700E3A727 /* PBXTargetDependency */,
+			);
+			name = CURLHandleUnitTests;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CURLHandleTester;
+			productReference = EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +291,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CURLHandleTester */,
+				EB15743916D27F6700E3A727 /* CURLHandleUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +317,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB15743E16D27F6700E3A727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB15743F16D27F6700E3A727 /* MainMenu.nib in Resources */,
+				EB15744016D27F6700E3A727 /* FindPanel.nib in Resources */,
+				EB15744116D27F6700E3A727 /* curl.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,6 +341,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB15744216D27F6700E3A727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB15744316D27F6700E3A727 /* main.m in Sources */,
+				EB15744416D27F6700E3A727 /* NSData+plist.m in Sources */,
+				EB15744516D27F6700E3A727 /* TestController.m in Sources */,
+				EB15744616D27F6700E3A727 /* TextFinder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +359,11 @@
 			isa = PBXTargetDependency;
 			name = CURLHandle;
 			targetProxy = 27456A0914C475AE008ADF9F /* PBXContainerItemProxy */;
+		};
+		EB15743A16D27F6700E3A727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CURLHandle;
+			targetProxy = EB15743B16D27F6700E3A727 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -315,7 +401,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = CURLHandleTester;
@@ -337,7 +422,6 @@
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = CURLHandleTester;
@@ -351,6 +435,7 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 			};
 			name = Debug;
 		};
@@ -359,6 +444,52 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+			};
+			name = Release;
+		};
+		EB15744B16D27F6700E3A727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../Frameworks",
+					"$(SRCROOT)/../CURLHandleSource/build/Debug",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "CURLHandleTester copy";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EB15744C16D27F6700E3A727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../Frameworks",
+					"$(SRCROOT)/../CURLHandleSource/build/Debug",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "CURLHandleTester copy";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -379,6 +510,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB15744B16D27F6700E3A727 /* Debug */,
+				EB15744C16D27F6700E3A727 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
