@@ -114,7 +114,6 @@
 		275707691503E21D00363512 /* CURLFTPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 275707671503E21C00363512 /* CURLFTPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2757076A1503E21D00363512 /* CURLFTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 275707681503E21C00363512 /* CURLFTPSession.m */; };
 		277D77E01603804900906915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
-		277D77E2160380AF00906915 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277D77E1160380AF00906915 /* CFNetwork.framework */; };
 		79B96CAC0A6360E00060AC12 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B96CA70A6360E00060AC12 /* SystemConfiguration.framework */; };
 		79B96CBF0A6360F90060AC12 /* CURLHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B96CBB0A6360F90060AC12 /* CURLHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79B96CC00A6360F90060AC12 /* CURLHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B96CBC0A6360F90060AC12 /* CURLHandle.m */; };
@@ -123,6 +122,15 @@
 		8008037E166C5BF4004D39F5 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AE1C71602C7DD001D02E1 /* libcurl.dylib */; };
 		8008037F166C5BF9004D39F5 /* libcares.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80080379166C5B40004D39F5 /* libcares.dylib */; };
 		EB15743816D24A4000E3A727 /* CURLHandle+extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B96CBD0A6360F90060AC12 /* CURLHandle+extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB28788A16D38B3000C07756 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB28788916D38B3000C07756 /* Security.framework */; };
+		EB28788C16D38B3400C07756 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB28788B16D38B3400C07756 /* CFNetwork.framework */; };
+		EB28788E16D38B4D00C07756 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB28788D16D38B4D00C07756 /* libz.dylib */; };
+		EB28789016D38B7300C07756 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB28788F16D38B7300C07756 /* SystemConfiguration.framework */; };
+		EB668C8916D35FD300FC6A77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB668C8816D35FD300FC6A77 /* Foundation.framework */; };
+		EB668C9416D3609100FC6A77 /* CURLHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B96CBC0A6360F90060AC12 /* CURLHandle.m */; };
+		EB668C9516D3609400FC6A77 /* CURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 27229B3914C83905007D0FF1 /* CURLProtocol.m */; };
+		EB668C9616D3609800FC6A77 /* CURLFTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 275707681503E21C00363512 /* CURLFTPSession.m */; };
+		EB668C9A16D36C0800FC6A77 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277D77E1160380AF00906915 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +198,15 @@
 			name = "Copy Files - Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB668C8416D35FD300FC6A77 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +232,14 @@
 		809AE1C71602C7DD001D02E1 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* CURLHandle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CURLHandle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB28788816D38A7E00C07756 /* ioscurl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ioscurl; path = ../ioscurl; sourceTree = "<group>"; };
+		EB28788916D38B3000C07756 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		EB28788B16D38B3400C07756 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		EB28788D16D38B4D00C07756 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		EB28788F16D38B7300C07756 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		EB668C8616D35FD300FC6A77 /* libCURLHandle-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCURLHandle-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB668C8816D35FD300FC6A77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB668C9716D3682000FC6A77 /* CURLHandle-iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CURLHandle-iOS_Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,11 +247,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB668C9A16D36C0800FC6A77 /* CFNetwork.framework in Frameworks */,
 				8008037E166C5BF4004D39F5 /* libcurl.dylib in Frameworks */,
 				8008037F166C5BF9004D39F5 /* libcares.dylib in Frameworks */,
 				277D77E01603804900906915 /* Foundation.framework in Frameworks */,
-				277D77E2160380AF00906915 /* CFNetwork.framework in Frameworks */,
 				79B96CAC0A6360E00060AC12 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB668C8316D35FD300FC6A77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB28789016D38B7300C07756 /* SystemConfiguration.framework in Frameworks */,
+				EB28788E16D38B4D00C07756 /* libz.dylib in Frameworks */,
+				EB28788C16D38B3400C07756 /* CFNetwork.framework in Frameworks */,
+				EB28788A16D38B3000C07756 /* Security.framework in Frameworks */,
+				EB668C8916D35FD300FC6A77 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* CURLHandle.framework */,
+				EB668C8616D35FD300FC6A77 /* libCURLHandle-iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +282,11 @@
 		0867D691FE84028FC02AAC07 /* CURLHandle */ = {
 			isa = PBXGroup;
 			children = (
+				EB28788F16D38B7300C07756 /* SystemConfiguration.framework */,
+				EB28788D16D38B4D00C07756 /* libz.dylib */,
+				EB28788B16D38B3400C07756 /* CFNetwork.framework */,
+				EB28788916D38B3000C07756 /* Security.framework */,
+				EB28788816D38A7E00C07756 /* ioscurl */,
 				8008031D166A93C4004D39F5 /* libcares-README.txt */,
 				8008031E166A93DD004D39F5 /* c-ares */,
 				80080316166962C7004D39F5 /* libcurl-README.txt */,
@@ -251,6 +294,7 @@
 				08FB77AEFE84172EC02AAC07 /* CURLHandle */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Libraries & Frameworks */,
+				EB668C8716D35FD300FC6A77 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
 			name = CURLHandle;
@@ -287,6 +331,7 @@
 				7959468A0AA88D0000EBF548 /* ResumableHTTPUploader.m */,
 				275707671503E21C00363512 /* CURLFTPSession.h */,
 				275707681503E21C00363512 /* CURLFTPSession.m */,
+				EB668C9716D3682000FC6A77 /* CURLHandle-iOS_Prefix.pch */,
 				32DBCF5E0370ADEE00C91783 /* CURLHandle_Prefix.pch */,
 			);
 			name = CURLHandle;
@@ -300,6 +345,14 @@
 				277D77E1160380AF00906915 /* CFNetwork.framework */,
 			);
 			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		EB668C8716D35FD300FC6A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB668C8816D35FD300FC6A77 /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +377,6 @@
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "CURLHandle" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
-				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
 				809AE1C91602C881001D02E1 /* Copy Files - Frameworks */,
 				8DC2EF560486A6940098B216 /* Frameworks */,
@@ -338,6 +390,23 @@
 			productName = CURLHandle;
 			productReference = 8DC2EF5B0486A6940098B216 /* CURLHandle.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		EB668C8516D35FD300FC6A77 /* CURLHandle-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB668C9116D35FD300FC6A77 /* Build configuration list for PBXNativeTarget "CURLHandle-iOS" */;
+			buildPhases = (
+				EB668C8216D35FD300FC6A77 /* Sources */,
+				EB668C8316D35FD300FC6A77 /* Frameworks */,
+				EB668C8416D35FD300FC6A77 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CURLHandle-iOS";
+			productName = "CURLHandle-iOS";
+			productReference = EB668C8616D35FD300FC6A77 /* libCURLHandle-iOS.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -360,6 +429,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* CURLHandle */,
+				EB668C8516D35FD300FC6A77 /* CURLHandle-iOS */,
 				809ADE7816029C38001D02E1 /* libcurl */,
 				809AE1BF1602BEF1001D02E1 /* libcurl-clean */,
 				8008030A16696287004D39F5 /* libcurl-i386 */,
@@ -371,16 +441,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		8DC2EF520486A6940098B216 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		800803191669665D004D39F5 /* Run Script - Configure + make */ = {
@@ -579,6 +639,16 @@
 				79B96CC00A6360F90060AC12 /* CURLHandle.m in Sources */,
 				27229B3B14C83905007D0FF1 /* CURLProtocol.m in Sources */,
 				2757076A1503E21D00363512 /* CURLFTPSession.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB668C8216D35FD300FC6A77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB668C9416D3609100FC6A77 /* CURLHandle.m in Sources */,
+				EB668C9516D3609400FC6A77 /* CURLProtocol.m in Sources */,
+				EB668C9616D3609800FC6A77 /* CURLFTPSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +924,72 @@
 			};
 			name = Release;
 		};
+		EB668C9216D35FD300FC6A77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CURLHandle_iOS.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CURLHandle-iOS_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../ioscurl/iOScURL\"";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../ioscurl\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EB668C9316D35FD300FC6A77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/CURLHandle_iOS.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CURLHandle-iOS_Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../ioscurl/iOScURL\"";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../ioscurl\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -943,6 +1079,15 @@
 			buildConfigurations = (
 				809AE1C11602BEF1001D02E1 /* Debug */,
 				809AE1C21602BEF1001D02E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB668C9116D35FD300FC6A77 /* Build configuration list for PBXNativeTarget "CURLHandle-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB668C9216D35FD300FC6A77 /* Debug */,
+				EB668C9316D35FD300FC6A77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

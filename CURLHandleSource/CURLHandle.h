@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <curl/curl.h>
+#import "curl/curl.h"
 
 @protocol CURLHandleDelegate;
 
