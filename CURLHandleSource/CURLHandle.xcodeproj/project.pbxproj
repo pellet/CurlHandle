@@ -282,10 +282,6 @@
 		0867D691FE84028FC02AAC07 /* CURLHandle */ = {
 			isa = PBXGroup;
 			children = (
-				EB28788F16D38B7300C07756 /* SystemConfiguration.framework */,
-				EB28788D16D38B4D00C07756 /* libz.dylib */,
-				EB28788B16D38B3400C07756 /* CFNetwork.framework */,
-				EB28788916D38B3000C07756 /* Security.framework */,
 				EB28788816D38A7E00C07756 /* ioscurl */,
 				8008031D166A93C4004D39F5 /* libcares-README.txt */,
 				8008031E166A93DD004D39F5 /* c-ares */,
@@ -340,11 +336,23 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB28789616D3B80000C07756 /* iOS */,
 				79B96CA70A6360E00060AC12 /* SystemConfiguration.framework */,
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
 				277D77E1160380AF00906915 /* CFNetwork.framework */,
 			);
 			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		EB28789616D3B80000C07756 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB28788F16D38B7300C07756 /* SystemConfiguration.framework */,
+				EB28788D16D38B4D00C07756 /* libz.dylib */,
+				EB28788B16D38B3400C07756 /* CFNetwork.framework */,
+				EB28788916D38B3000C07756 /* Security.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		EB668C8716D35FD300FC6A77 /* Frameworks */ = {
