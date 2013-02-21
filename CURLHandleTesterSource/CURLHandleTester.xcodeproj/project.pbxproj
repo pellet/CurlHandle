@@ -109,7 +109,7 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CURLHandleTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CURLHandleTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE885B250EF08D5200B6E545 /* curl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = curl.icns; sourceTree = "<group>"; };
-		EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleTester copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleUnitTests-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4EB54816D63BEA001ED971 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = "../../gh-unit/Project-MacOSX/build/Debug/GHUnit.framework"; sourceTree = "<group>"; };
 		EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = "../../gh-unit/Classes-MacOSX/GHUnitTestMain.m"; sourceTree = "<group>"; };
 		EB4EB55216D63DA0001ED971 /* CURLHandleHTTPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CURLHandleHTTPTest.h; path = UnitTests/CURLHandleHTTPTest.h; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* CURLHandleTester.app */,
-				EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */,
+				EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 			name = "CURLHandleUnitTests-Mac";
 			productInstallPath = "$(HOME)/Applications";
 			productName = CURLHandleTester;
-			productReference = EB15744D16D27F6700E3A727 /* CURLHandleTester copy.app */;
+			productReference = EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -489,6 +489,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 			};
 			name = Debug;
 		};
@@ -498,6 +499,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 			};
 			name = Release;
 		};
@@ -520,7 +522,7 @@
 				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "CURLHandleTester copy";
+				PRODUCT_NAME = "CURLHandleUnitTests-Mac";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -544,7 +546,7 @@
 				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "CURLHandleTester copy";
+				PRODUCT_NAME = "CURLHandleUnitTests-Mac";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
