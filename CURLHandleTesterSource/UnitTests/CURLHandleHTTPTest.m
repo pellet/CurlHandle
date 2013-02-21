@@ -25,7 +25,6 @@
 @property (retain) NSString *curlHandleDestinationPath;
 @property (retain) NSString *vanillaConnectionDestinationPath;
 
-@property (retain) NSURLConnection *connection;
 @property (retain) NSOutputStream *output;
 
 @end
@@ -42,27 +41,19 @@ NSInteger const SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE = (NSInteger)0.25;
 {
     NSString *filename = @"Bear%20In%20Heaven%20-%20You%20Do%20You%20(Live%20on%20KEXP).mp4";
     NSURL *source = [NSURL URLWithString:[NSString stringWithFormat:@"http://127.0.0.1/~%@/%@",NSUserName(),filename]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:source];
     
     self.curlHandleDestinationPath = [self.CURLHandleDestinationDirectory stringByAppendingPathComponent:[filename stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    self.output = [NSOutputStream outputStreamToFileAtPath:self.curlHandleDestinationPath append:NO];
-    [self.output open];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:source];
     [request setShouldUseCurlHandle:YES];
-    self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    
-    while (NO==self.isFinished && nil==self.error) {
-		[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE]];
-	}
-    
-    [self.output close];
+    [self getFileFromSiteWithNSURLConnection:request destination:self.curlHandleDestinationPath];
     
     GHAssertNil(self.error, @"Error occured whilst running the CURLHandle NSURLConnection: %@",self.error.description);
     
     self.vanillaConnectionDestinationPath = [self.VanillaConnectionDestinationDirectory stringByAppendingPathComponent:[filename stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    
     [request setShouldUseCurlHandle:NO];
     [self getFileFromSiteWithNSURLConnection:request destination:self.vanillaConnectionDestinationPath];
+    
+    GHAssertNil(self.error, @"Error occured whilst running the vanilla NSURLConnection: %@",self.error.description);
     
     NSString *curlDestChecksum = [self getMD5FromFile:self.curlHandleDestinationPath];
     NSString *vanillaDestChecksum = [self getMD5FromFile:self.vanillaConnectionDestinationPath];
@@ -102,8 +93,6 @@ NSInteger const SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE = (NSInteger)0.25;
     while (NO==self.isFinished && nil==self.error) {
 		[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE]];
 	}
-    GHAssertNil(self.error, @"Error occured whilst running the vanilla NSURLConnection: %@",self.error.description);
-    
     [self.output close];
 }
 
@@ -152,8 +141,9 @@ NSInteger const SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE = (NSInteger)0.25;
 
 - (void)tearDown
 {
-    self.isFinished=NO;
-    self.error=nil;
+    NSError *removeError = nil;
+    [[NSFileManager defaultManager] removeItemAtPath:self.curlHandleDestinationPath error:&removeError];
+    [[NSFileManager defaultManager] removeItemAtPath:self.vanillaConnectionDestinationPath error:&removeError];
 }
 
 @end
