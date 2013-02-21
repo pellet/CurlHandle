@@ -15,6 +15,7 @@
 @interface CURLHandleHTTPTest()
 
 #pragma Constants
+@property (retain, readonly) NSString *TestWorkspace;
 @property (retain, readonly) NSString *CURLHandleDestinationDirectory;
 @property (retain, readonly) NSString *VanillaConnectionDestinationDirectory;
 
@@ -114,36 +115,31 @@ NSInteger const SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE = (NSInteger)0.25;
     return hash;
 }
 
-- (id)init
-{
-    self = [super init];
-    
-    if (nil!=self) {
-        NSError *error;
-        
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString * const DOCUMENT_BASE = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"CURLHandleTests"];
-        [[NSFileManager defaultManager] createDirectoryAtPath:DOCUMENT_BASE withIntermediateDirectories:NO attributes:nil error:&error];
-        
-        _CURLHandleDestinationDirectory = [DOCUMENT_BASE stringByAppendingPathComponent:@"CURLHandle_Destination"];
-        [[NSFileManager defaultManager] createDirectoryAtPath:self.CURLHandleDestinationDirectory withIntermediateDirectories:NO attributes:nil error:&error];
-        
-        _VanillaConnectionDestinationDirectory = [DOCUMENT_BASE stringByAppendingPathComponent:@"NSURLConnection_Destination"];
-        [[NSFileManager defaultManager] createDirectoryAtPath:self.VanillaConnectionDestinationDirectory withIntermediateDirectories:NO attributes:nil error:&error];
-    }
-    
-    return self;
-}
-
 - (void)setUp
 {
+    NSError *error;
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _TestWorkspace = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"CURLHandleTests"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:self.TestWorkspace withIntermediateDirectories:NO attributes:nil error:&error];
+    
+    _CURLHandleDestinationDirectory = [self.TestWorkspace stringByAppendingPathComponent:@"CURLHandle_Destination"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:self.CURLHandleDestinationDirectory withIntermediateDirectories:NO attributes:nil error:&error];
+    
+    _VanillaConnectionDestinationDirectory = [self.TestWorkspace stringByAppendingPathComponent:@"NSURLConnection_Destination"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:self.VanillaConnectionDestinationDirectory withIntermediateDirectories:NO attributes:nil error:&error];
 }
 
 - (void)tearDown
 {
     NSError *removeError = nil;
     [[NSFileManager defaultManager] removeItemAtPath:self.curlHandleDestinationPath error:&removeError];
+    [[NSFileManager defaultManager] removeItemAtPath:self.CURLHandleDestinationDirectory error:&removeError];
+    
     [[NSFileManager defaultManager] removeItemAtPath:self.vanillaConnectionDestinationPath error:&removeError];
+    [[NSFileManager defaultManager] removeItemAtPath:self.VanillaConnectionDestinationDirectory error:&removeError];
+    
+    [[NSFileManager defaultManager] removeItemAtPath:self.TestWorkspace error:&removeError];
 }
 
 @end
