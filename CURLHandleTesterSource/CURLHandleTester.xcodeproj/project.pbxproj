@@ -30,6 +30,12 @@
 		EB4EB54A16D63C15001ED971 /* GHUnit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB4EB54816D63BEA001ED971 /* GHUnit.framework */; };
 		EB4EB55016D63CCA001ED971 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */; };
 		EB4EB55416D63DA0001ED971 /* CURLHandleHTTPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */; };
+		EBAD95CB16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
+		EBAD95CC16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
+		EBAD95CD16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
+		EBAD95CE16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
+		EBAD95D416DDCFD500C638F7 /* libcurl.4.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
+		EBAD95EA16DDD64200C638F7 /* libcurl.4.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2F7C0D7F09D9C06B00FE334E /* CURLHandle.framework in Copy Frameworks */,
+				EBAD95EA16DDD64200C638F7 /* libcurl.4.dylib in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +90,7 @@
 			files = (
 				EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */,
 				EB4EB54A16D63C15001ED971 /* GHUnit.framework in Copy Frameworks */,
+				EBAD95D416DDCFD500C638F7 /* libcurl.4.dylib in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +122,8 @@
 		EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = "../../gh-unit/Classes-MacOSX/GHUnitTestMain.m"; sourceTree = "<group>"; };
 		EB4EB55216D63DA0001ED971 /* CURLHandleHTTPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CURLHandleHTTPTest.h; path = UnitTests/CURLHandleHTTPTest.h; sourceTree = "<group>"; };
 		EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CURLHandleHTTPTest.m; path = UnitTests/CURLHandleHTTPTest.m; sourceTree = "<group>"; };
+		EBAD95C916DDCF5B00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; name = libcares.dylib; path = ../CURLHandleSource/libcares.dylib; sourceTree = "<group>"; };
+		EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; name = libcurl.4.dylib; path = ../CURLHandleSource/libcurl.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +263,8 @@
 		EB4EB54D16D63C68001ED971 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				EBAD95C916DDCF5B00C638F7 /* libcares.dylib */,
+				EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */,
 				EB4EB54E16D63C70001ED971 /* GHUnit */,
 			);
 			name = Mac;
@@ -274,10 +286,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CURLHandleTester" */;
 			buildPhases = (
-				2F7C0D0E09D9BF2B00FE334E /* Copy Frameworks */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				2F7C0D0E09D9BF2B00FE334E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,9 +307,9 @@
 			buildConfigurationList = EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-Mac" */;
 			buildPhases = (
 				EB15744216D27F6700E3A727 /* Sources */,
-				EB15743C16D27F6700E3A727 /* Copy Frameworks */,
 				EB15743E16D27F6700E3A727 /* Resources */,
 				EB15744716D27F6700E3A727 /* Frameworks */,
+				EB15743C16D27F6700E3A727 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,6 +378,8 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				2F7C0CF409D9BEBF00FE334E /* FindPanel.nib in Resources */,
 				CE885B260EF08D5200B6E545 /* curl.icns in Resources */,
+				EBAD95CB16DDCF5B00C638F7 /* libcares.dylib in Resources */,
+				EBAD95CD16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +390,8 @@
 				EB15743F16D27F6700E3A727 /* MainMenu.nib in Resources */,
 				EB15744016D27F6700E3A727 /* FindPanel.nib in Resources */,
 				EB15744116D27F6700E3A727 /* curl.icns in Resources */,
+				EBAD95CC16DDCF5B00C638F7 /* libcares.dylib in Resources */,
+				EBAD95CE16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,12 +526,10 @@
 				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(SRCROOT)/../Frameworks",
 					"$(SRCROOT)/../CURLHandleSource/build/Debug",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Debug\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Release\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -535,12 +549,10 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(SRCROOT)/../Frameworks",
 					"$(SRCROOT)/../CURLHandleSource/build/Debug",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Debug\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Release\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
