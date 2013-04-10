@@ -32,10 +32,8 @@
 		EB4EB55416D63DA0001ED971 /* CURLHandleHTTPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */; };
 		EBAD95CB16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
 		EBAD95CC16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
-		EBAD95CD16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
-		EBAD95CE16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
-		EBAD95D416DDCFD500C638F7 /* libcurl.4.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
-		EBAD95EA16DDD64200C638F7 /* libcurl.4.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */; };
+		EBB1846F1714F2AB00412219 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB1846D1714F29400412219 /* libcurl.4.dylib */; };
+		EBB184701714F2BF00412219 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB1846D1714F29400412219 /* libcurl.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +75,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2F7C0D7F09D9C06B00FE334E /* CURLHandle.framework in Copy Frameworks */,
-				EBAD95EA16DDD64200C638F7 /* libcurl.4.dylib in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +87,6 @@
 			files = (
 				EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */,
 				EB4EB54A16D63C15001ED971 /* GHUnit.framework in Copy Frameworks */,
-				EBAD95D416DDCFD500C638F7 /* libcurl.4.dylib in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,8 +118,8 @@
 		EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = "../../gh-unit/Classes-MacOSX/GHUnitTestMain.m"; sourceTree = "<group>"; };
 		EB4EB55216D63DA0001ED971 /* CURLHandleHTTPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CURLHandleHTTPTest.h; path = UnitTests/CURLHandleHTTPTest.h; sourceTree = "<group>"; };
 		EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CURLHandleHTTPTest.m; path = UnitTests/CURLHandleHTTPTest.m; sourceTree = "<group>"; };
-		EBAD95C916DDCF5B00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; name = libcares.dylib; path = ../CURLHandleSource/libcares.dylib; sourceTree = "<group>"; };
-		EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; name = libcurl.4.dylib; path = ../CURLHandleSource/libcurl.4.dylib; sourceTree = "<group>"; };
+		EBAD95C916DDCF5B00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = ../CURLHandleSource/libcares.dylib; sourceTree = "<group>"; };
+		EBB1846D1714F29400412219 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcurl.4.dylib; sourceTree = SYSTEM_DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +129,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				2F7C0D7C09D9C06900FE334E /* CURLHandle.framework in Frameworks */,
+				EBB184701714F2BF00412219 /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +140,7 @@
 				EB15744816D27F6700E3A727 /* Cocoa.framework in Frameworks */,
 				EB15744916D27F6700E3A727 /* CURLHandle.framework in Frameworks */,
 				EB4EB54916D63BEA001ED971 /* GHUnit.framework in Frameworks */,
+				EBB1846F1714F2AB00412219 /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +261,8 @@
 		EB4EB54D16D63C68001ED971 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				EBB1846D1714F29400412219 /* libcurl.4.dylib */,
 				EBAD95C916DDCF5B00C638F7 /* libcares.dylib */,
-				EBAD95CA16DDCF5B00C638F7 /* libcurl.4.dylib */,
 				EB4EB54E16D63C70001ED971 /* GHUnit */,
 			);
 			name = Mac;
@@ -379,7 +377,6 @@
 				2F7C0CF409D9BEBF00FE334E /* FindPanel.nib in Resources */,
 				CE885B260EF08D5200B6E545 /* curl.icns in Resources */,
 				EBAD95CB16DDCF5B00C638F7 /* libcares.dylib in Resources */,
-				EBAD95CD16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +388,6 @@
 				EB15744016D27F6700E3A727 /* FindPanel.nib in Resources */,
 				EB15744116D27F6700E3A727 /* curl.icns in Resources */,
 				EBAD95CC16DDCF5B00C638F7 /* libcares.dylib in Resources */,
-				EBAD95CE16DDCF5B00C638F7 /* libcurl.4.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

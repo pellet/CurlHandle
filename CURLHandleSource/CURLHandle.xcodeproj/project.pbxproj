@@ -127,7 +127,7 @@
 		EB668C9516D3609400FC6A77 /* CURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 27229B3914C83905007D0FF1 /* CURLProtocol.m */; };
 		EB668C9616D3609800FC6A77 /* CURLFTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 275707681503E21C00363512 /* CURLFTPSession.m */; };
 		EB668C9A16D36C0800FC6A77 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277D77E1160380AF00906915 /* CFNetwork.framework */; };
-		EBAD95B016DDAC1F00C638F7 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD95AE16DDAC1000C638F7 /* libcurl.4.dylib */; };
+		EBB184721714F30C00412219 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB184711714F30C00412219 /* libcurl.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,8 +223,8 @@
 		EB668C8616D35FD300FC6A77 /* libCURLHandle-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCURLHandle-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB668C8816D35FD300FC6A77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB668C9716D3682000FC6A77 /* CURLHandle-iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CURLHandle-iOS_Prefix.pch"; sourceTree = "<group>"; };
-		EBAD95AE16DDAC1000C638F7 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.4.dylib; sourceTree = "<group>"; };
 		EBAD95EB16DDD75F00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcares.dylib; sourceTree = "<group>"; };
+		EBB184711714F30C00412219 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = usr/lib/libcurl.4.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,10 +232,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB184721714F30C00412219 /* libcurl.4.dylib in Frameworks */,
 				EB668C9A16D36C0800FC6A77 /* CFNetwork.framework in Frameworks */,
 				277D77E01603804900906915 /* Foundation.framework in Frameworks */,
 				79B96CAC0A6360E00060AC12 /* SystemConfiguration.framework in Frameworks */,
-				EBAD95B016DDAC1F00C638F7 /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				EBAD95EB16DDD75F00C638F7 /* libcares.dylib */,
-				EBAD95AE16DDAC1000C638F7 /* libcurl.4.dylib */,
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
 			);
 			name = "Libraries & Frameworks";
@@ -320,6 +319,7 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB184751714F75900412219 /* Mac */,
 				EB28789616D3B80000C07756 /* iOS */,
 				79B96CA70A6360E00060AC12 /* SystemConfiguration.framework */,
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
@@ -345,6 +345,14 @@
 				EB668C8816D35FD300FC6A77 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBB184751714F75900412219 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				EBB184711714F30C00412219 /* libcurl.4.dylib */,
+			);
+			name = Mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
