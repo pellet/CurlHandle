@@ -7,7 +7,7 @@
 //
 
 #import "CURLHandleHTTPTest.h"
-#import <CURLHandle/CURLProtocol.h>
+#import "CURLProtocol.h"
 #import <CommonCrypto/CommonDigest.h>
 
 

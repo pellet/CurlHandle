@@ -6,7 +6,7 @@
 //
 //
 
-#import <GHUnit/GHUnit.h>
+#import "GHUnit.h"
 
 @interface CURLHandleHTTPTest : GHTestCase <NSURLConnectionDelegate> {
 @private

@@ -16,7 +16,9 @@
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		ADED29BEF4FA435CBFDACB73 /* libPods-CURLHandleUnitTests-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E24D8000374A8B8215F5E8 /* libPods-CURLHandleUnitTests-iOS.a */; };
 		CE885B260EF08D5200B6E545 /* curl.icns in Resources */ = {isa = PBXBuildFile; fileRef = CE885B250EF08D5200B6E545 /* curl.icns */; };
+		DC42E9E349A741FFB010882C /* libPods-CURLHandleUnitTests-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BFCF9C56A845D1955EBA36 /* libPods-CURLHandleUnitTests-OSX.a */; };
 		EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */; };
 		EB15743F16D27F6700E3A727 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		EB15744016D27F6700E3A727 /* FindPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C0CF209D9BEBF00FE334E /* FindPanel.nib */; };
@@ -26,14 +28,26 @@
 		EB15744616D27F6700E3A727 /* TextFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C0CEE09D9BEAF00FE334E /* TextFinder.m */; };
 		EB15744816D27F6700E3A727 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EB15744916D27F6700E3A727 /* CURLHandle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */; };
-		EB4EB54916D63BEA001ED971 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4EB54816D63BEA001ED971 /* GHUnit.framework */; };
-		EB4EB54A16D63C15001ED971 /* GHUnit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EB4EB54816D63BEA001ED971 /* GHUnit.framework */; };
-		EB4EB55016D63CCA001ED971 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */; };
 		EB4EB55416D63DA0001ED971 /* CURLHandleHTTPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */; };
+		EB6BE17F172674CE00D7081E /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6BE17E172674CE00D7081E /* GHUnitTestMain.m */; };
+		EB6BE183172675F200D7081E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6BE182172675F200D7081E /* main.m */; };
+		EB6BE1871726770800D7081E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE1861726770800D7081E /* UIKit.framework */; };
+		EB6BE189172679A200D7081E /* libCURLHandle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4EB54716D63B69001ED971 /* libCURLHandle-iOS.a */; };
+		EB6BE18B172679D700D7081E /* libcurl-simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18A172679D700D7081E /* libcurl-simulator.a */; };
+		EB6BE18D17267A2400D7081E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18C17267A2400D7081E /* libz.dylib */; };
+		EB6BE18F17267A2E00D7081E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18E17267A2E00D7081E /* Security.framework */; };
+		EB6BE19117267A7700D7081E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE19017267A7700D7081E /* CFNetwork.framework */; };
+		EB6BE19317267AB100D7081E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE19217267AB100D7081E /* CoreGraphics.framework */; };
 		EBAD95CB16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
 		EBAD95CC16DDCF5B00C638F7 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
-		EBB1846F1714F2AB00412219 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB1846D1714F29400412219 /* libcurl.4.dylib */; };
-		EBB184701714F2BF00412219 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB1846D1714F29400412219 /* libcurl.4.dylib */; };
+		EBB61EE71726616C00D3E829 /* NSData+plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C0CEA09D9BEAF00FE334E /* NSData+plist.m */; };
+		EBB61EEB1726616C00D3E829 /* CURLHandleHTTPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */; };
+		EBB61EED1726616C00D3E829 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EBB61EEE1726616C00D3E829 /* FindPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C0CF209D9BEBF00FE334E /* FindPanel.nib */; };
+		EBB61EEF1726616C00D3E829 /* curl.icns in Resources */ = {isa = PBXBuildFile; fileRef = CE885B250EF08D5200B6E545 /* curl.icns */; };
+		EBB61EF01726616C00D3E829 /* libcares.dylib in Resources */ = {isa = PBXBuildFile; fileRef = EBAD95C916DDCF5B00C638F7 /* libcares.dylib */; };
+		EBB61EF71726616C00D3E829 /* CURLHandle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */; };
+		EBB61F0A172666D500D3E829 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB61F09172666D500D3E829 /* libcurl.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +79,13 @@
 			remoteGlobalIDString = EB668C8616D35FD300FC6A77;
 			remoteInfo = "CURLHandle-iOS";
 		};
+		EB6BE1841726761500D7081E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27456A0014C4756F008ADF9F /* CURLHandle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EB668C8516D35FD300FC6A77;
+			remoteInfo = "CURLHandle-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,7 +107,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EB15743D16D27F6700E3A727 /* CURLHandle.framework in Copy Frameworks */,
-				EB4EB54A16D63C15001ED971 /* GHUnit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB61EF61726616C00D3E829 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EBB61EF71726616C00D3E829 /* CURLHandle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,16 +141,29 @@
 		2F7C0CF309D9BEBF00FE334E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FindPanel.nib; sourceTree = "<group>"; };
 		2F7C0D7B09D9C06900FE334E /* CURLHandle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CURLHandle.framework; path = ../../../CURLHandleSource/build/Debug/CURLHandle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA4F630368D1EE00C91783 /* CURLHandleTester_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CURLHandleTester_Prefix.pch; sourceTree = "<group>"; };
+		40BFCF9C56A845D1955EBA36 /* libPods-CURLHandleUnitTests-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CURLHandleUnitTests-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B089F51C2094A2BAD4EBB1F /* Pods-CURLHandleUnitTests-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CURLHandleUnitTests-iOS.xcconfig"; path = "Pods/Pods-CURLHandleUnitTests-iOS.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CURLHandleTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CURLHandleTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0C2B2B6E9F4547A97A045B /* Pods-CURLHandleUnitTests-OSX.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CURLHandleUnitTests-OSX.xcconfig"; path = "Pods/Pods-CURLHandleUnitTests-OSX.xcconfig"; sourceTree = SOURCE_ROOT; };
 		CE885B250EF08D5200B6E545 /* curl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = curl.icns; sourceTree = "<group>"; };
 		EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleUnitTests-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4EB54816D63BEA001ED971 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = "../../gh-unit/Project-MacOSX/build/Debug/GHUnit.framework"; sourceTree = "<group>"; };
-		EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = "../../gh-unit/Classes-MacOSX/GHUnitTestMain.m"; sourceTree = "<group>"; };
 		EB4EB55216D63DA0001ED971 /* CURLHandleHTTPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CURLHandleHTTPTest.h; path = UnitTests/CURLHandleHTTPTest.h; sourceTree = "<group>"; };
 		EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CURLHandleHTTPTest.m; path = UnitTests/CURLHandleHTTPTest.m; sourceTree = "<group>"; };
+		EB6BE17E172674CE00D7081E /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
+		EB6BE182172675F200D7081E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = UnitTests/iOS/main.m; sourceTree = "<group>"; };
+		EB6BE1861726770800D7081E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EB6BE18A172679D700D7081E /* libcurl-simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurl-simulator.a"; path = "../ioscurl/libcurl-simulator.a"; sourceTree = "<group>"; };
+		EB6BE18C17267A2400D7081E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.dylib; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EB6BE18E17267A2E00D7081E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EB6BE19017267A7700D7081E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EB6BE19217267AB100D7081E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		EBAD95C916DDCF5B00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = ../CURLHandleSource/libcares.dylib; sourceTree = "<group>"; };
-		EBB1846D1714F29400412219 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcurl.4.dylib; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EBB61EFC1726616C00D3E829 /* CURLHandleUnitTests-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleUnitTests-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB61EFD1726616C00D3E829 /* CURLHandleUnitTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CURLHandleUnitTests-iOS-Info.plist"; path = "/Users/eggers/freshfromrepo/vidhog/External/CurlHandle/CURLHandleTesterSource/CURLHandleUnitTests-iOS-Info.plist"; sourceTree = "<absolute>"; };
+		EBB61F09172666D500D3E829 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcurl.dylib; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		EBB61F0B172667D000D3E829 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F4E24D8000374A8B8215F5E8 /* libPods-CURLHandleUnitTests-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CURLHandleUnitTests-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +173,6 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				2F7C0D7C09D9C06900FE334E /* CURLHandle.framework in Frameworks */,
-				EBB184701714F2BF00412219 /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +180,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB61F0A172666D500D3E829 /* libcurl.dylib in Frameworks */,
 				EB15744816D27F6700E3A727 /* Cocoa.framework in Frameworks */,
 				EB15744916D27F6700E3A727 /* CURLHandle.framework in Frameworks */,
-				EB4EB54916D63BEA001ED971 /* GHUnit.framework in Frameworks */,
-				EBB1846F1714F2AB00412219 /* libcurl.4.dylib in Frameworks */,
+				DC42E9E349A741FFB010882C /* libPods-CURLHandleUnitTests-OSX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB61EF11726616C00D3E829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6BE19317267AB100D7081E /* CoreGraphics.framework in Frameworks */,
+				EB6BE19117267A7700D7081E /* CFNetwork.framework in Frameworks */,
+				EB6BE18F17267A2E00D7081E /* Security.framework in Frameworks */,
+				EB6BE18D17267A2400D7081E /* libz.dylib in Frameworks */,
+				EB6BE18B172679D700D7081E /* libcurl-simulator.a in Frameworks */,
+				EB6BE189172679A200D7081E /* libCURLHandle-iOS.a in Frameworks */,
+				EB6BE1871726770800D7081E /* UIKit.framework in Frameworks */,
+				ADED29BEF4FA435CBFDACB73 /* libPods-CURLHandleUnitTests-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +243,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* CURLHandleTester.app */,
 				EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */,
+				EBB61EFC1726616C00D3E829 /* CURLHandleUnitTests-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +274,8 @@
 				274569FF14C47543008ADF9F /* Dependencies */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				5B089F51C2094A2BAD4EBB1F /* Pods-CURLHandleUnitTests-iOS.xcconfig */,
+				CA0C2B2B6E9F4547A97A045B /* Pods-CURLHandleUnitTests-OSX.xcconfig */,
 			);
 			name = CURLHandleTester;
 			sourceTree = "<group>";
@@ -234,6 +295,7 @@
 				CE885B250EF08D5200B6E545 /* curl.icns */,
 				2F7C0CF209D9BEBF00FE334E /* FindPanel.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				EBB61EFD1726616C00D3E829 /* CURLHandleUnitTests-iOS-Info.plist */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 			);
 			name = Resources;
@@ -242,9 +304,13 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB61F0B172667D000D3E829 /* Podfile */,
+				EB6BE1881726774F00D7081E /* iOS */,
 				EB4EB54D16D63C68001ED971 /* Mac */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				F4E24D8000374A8B8215F5E8 /* libPods-CURLHandleUnitTests-iOS.a */,
+				40BFCF9C56A845D1955EBA36 /* libPods-CURLHandleUnitTests-OSX.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +318,8 @@
 		EB4EB54B16D63C24001ED971 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EB6BE1811726758800D7081E /* iOS */,
+				EB6BE1801726758000D7081E /* OSX */,
 				EB4EB55216D63DA0001ED971 /* CURLHandleHTTPTest.h */,
 				EB4EB55316D63DA0001ED971 /* CURLHandleHTTPTest.m */,
 			);
@@ -261,20 +329,39 @@
 		EB4EB54D16D63C68001ED971 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				EBB1846D1714F29400412219 /* libcurl.4.dylib */,
+				EBB61F09172666D500D3E829 /* libcurl.dylib */,
 				EBAD95C916DDCF5B00C638F7 /* libcares.dylib */,
-				EB4EB54E16D63C70001ED971 /* GHUnit */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
 		};
-		EB4EB54E16D63C70001ED971 /* GHUnit */ = {
+		EB6BE1801726758000D7081E /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				EB4EB54F16D63CCA001ED971 /* GHUnitTestMain.m */,
-				EB4EB54816D63BEA001ED971 /* GHUnit.framework */,
+				EB6BE17E172674CE00D7081E /* GHUnitTestMain.m */,
 			);
-			name = GHUnit;
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		EB6BE1811726758800D7081E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB6BE182172675F200D7081E /* main.m */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB6BE1881726774F00D7081E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB6BE19217267AB100D7081E /* CoreGraphics.framework */,
+				EB6BE19017267A7700D7081E /* CFNetwork.framework */,
+				EB6BE18E17267A2E00D7081E /* Security.framework */,
+				EB6BE18C17267A2400D7081E /* libz.dylib */,
+				EB6BE18A172679D700D7081E /* libcurl-simulator.a */,
+				EB6BE1861726770800D7081E /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,24 +387,46 @@
 			productReference = 8D1107320486CEB800E47090 /* CURLHandleTester.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EB15743916D27F6700E3A727 /* CURLHandleUnitTests-Mac */ = {
+		EB15743916D27F6700E3A727 /* CURLHandleUnitTests-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-Mac" */;
+			buildConfigurationList = EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-OSX" */;
 			buildPhases = (
 				EB15744216D27F6700E3A727 /* Sources */,
 				EB15743E16D27F6700E3A727 /* Resources */,
 				EB15744716D27F6700E3A727 /* Frameworks */,
 				EB15743C16D27F6700E3A727 /* Copy Frameworks */,
+				DBCE3A7BE23942E68DF4D5E5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				EB15743A16D27F6700E3A727 /* PBXTargetDependency */,
 			);
-			name = "CURLHandleUnitTests-Mac";
+			name = "CURLHandleUnitTests-OSX";
 			productInstallPath = "$(HOME)/Applications";
 			productName = CURLHandleTester;
 			productReference = EB15744D16D27F6700E3A727 /* CURLHandleUnitTests-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBB61EE31726616C00D3E829 /* CURLHandleUnitTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB61EF91726616C00D3E829 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-iOS" */;
+			buildPhases = (
+				EBB61EE61726616C00D3E829 /* Sources */,
+				EBB61EEC1726616C00D3E829 /* Resources */,
+				EBB61EF11726616C00D3E829 /* Frameworks */,
+				EBB61EF61726616C00D3E829 /* Copy Frameworks */,
+				FA7A4807E86449DD834C93F9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB6BE1851726761500D7081E /* PBXTargetDependency */,
+			);
+			name = "CURLHandleUnitTests-iOS";
+			productInstallPath = "$(HOME)/Applications";
+			productName = CURLHandleTester;
+			productReference = EBB61EFC1726616C00D3E829 /* CURLHandleUnitTests-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +455,8 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CURLHandleTester */,
-				EB15743916D27F6700E3A727 /* CURLHandleUnitTests-Mac */,
+				EB15743916D27F6700E3A727 /* CURLHandleUnitTests-OSX */,
+				EBB61EE31726616C00D3E829 /* CURLHandleUnitTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -391,7 +501,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB61EEC1726616C00D3E829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB61EED1726616C00D3E829 /* MainMenu.nib in Resources */,
+				EBB61EEE1726616C00D3E829 /* FindPanel.nib in Resources */,
+				EBB61EEF1726616C00D3E829 /* curl.icns in Resources */,
+				EBB61EF01726616C00D3E829 /* libcares.dylib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBCE3A7BE23942E68DF4D5E5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CURLHandleUnitTests-OSX-resources.sh\"\n";
+		};
+		FA7A4807E86449DD834C93F9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CURLHandleUnitTests-iOS-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -412,8 +564,18 @@
 				EB15744416D27F6700E3A727 /* NSData+plist.m in Sources */,
 				EB15744516D27F6700E3A727 /* TestController.m in Sources */,
 				EB15744616D27F6700E3A727 /* TextFinder.m in Sources */,
-				EB4EB55016D63CCA001ED971 /* GHUnitTestMain.m in Sources */,
 				EB4EB55416D63DA0001ED971 /* CURLHandleHTTPTest.m in Sources */,
+				EB6BE17F172674CE00D7081E /* GHUnitTestMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB61EE61726616C00D3E829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB61EE71726616C00D3E829 /* NSData+plist.m in Sources */,
+				EBB61EEB1726616C00D3E829 /* CURLHandleHTTPTest.m in Sources */,
+				EB6BE183172675F200D7081E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +591,11 @@
 			isa = PBXTargetDependency;
 			name = CURLHandle;
 			targetProxy = EB15743B16D27F6700E3A727 /* PBXContainerItemProxy */;
+		};
+		EB6BE1851726761500D7081E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CURLHandle-iOS";
+			targetProxy = EB6BE1841726761500D7081E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,45 +684,98 @@
 		};
 		EB15744B16D27F6700E3A727 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0C2B2B6E9F4547A97A045B /* Pods-CURLHandleUnitTests-OSX.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../CURLHandleSource/build/Debug",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../CURLHandleSource/build/Debug";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
+				HEADER_SEARCH_PATHS = "$(PODS_HEADERS_SEARCH_PATHS)";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Pods/build/Debug";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "CURLHandleUnitTests-Mac";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		EB15744C16D27F6700E3A727 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0C2B2B6E9F4547A97A045B /* Pods-CURLHandleUnitTests-OSX.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../CURLHandleSource/build/Debug",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../gh-unit/Project-MacOSX/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../CURLHandleSource/build/Debug";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				HEADER_SEARCH_PATHS = "../curl/include/curl/**";
+				HEADER_SEARCH_PATHS = "$(PODS_HEADERS_SEARCH_PATHS)";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Pods/build/Debug";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "CURLHandleUnitTests-Mac";
 				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EBB61EFA1726616C00D3E829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B089F51C2094A2BAD4EBB1F /* Pods-CURLHandleUnitTests-iOS.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../CURLHandleSource/build/Debug-iphonesimulator";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(SRCROOT)/../CURLHandleSource/",
+					"$(PODS_HEADERS_SEARCH_PATHS)",
+				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../ioscurl/iOScURL\"";
+				INFOPLIST_FILE = "CURLHandleUnitTests-iOS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Pods/build/Debug-iphonesimulator",
+					"$(SRCROOT)/../CURLHandleSource/build/Debug-iphonesimulator",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../ioscurl\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "CURLHandleUnitTests-iOS";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EBB61EFB1726616C00D3E829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B089F51C2094A2BAD4EBB1F /* Pods-CURLHandleUnitTests-iOS.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../CURLHandleSource/build/Debug-iphonesimulator";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(SRCROOT)/../CURLHandleSource/",
+					"$(PODS_HEADERS_SEARCH_PATHS)",
+				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../ioscurl/iOScURL\"";
+				INFOPLIST_FILE = "CURLHandleUnitTests-iOS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Pods/build/Debug-iphonesimulator",
+					"$(SRCROOT)/../CURLHandleSource/build/Debug-iphonesimulator",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../ioscurl\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "CURLHandleUnitTests-iOS";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -581,11 +801,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-Mac" */ = {
+		EB15744A16D27F6700E3A727 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB15744B16D27F6700E3A727 /* Debug */,
 				EB15744C16D27F6700E3A727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB61EF91726616C00D3E829 /* Build configuration list for PBXNativeTarget "CURLHandleUnitTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB61EFA1726616C00D3E829 /* Debug */,
+				EBB61EFB1726616C00D3E829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

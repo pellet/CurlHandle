@@ -10,3 +10,6 @@ profile
 *.perspectivev3
 *.xcuserstate
 xcuserdata/
+
+#pod
+Pods/

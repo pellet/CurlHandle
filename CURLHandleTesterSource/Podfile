@@ -1,0 +1,9 @@
+target :"CURLHandleUnitTests-iOS" do
+    platform :ios
+    pod 'GHUnitIOS'
+end
+
+target :"CURLHandleUnitTests-OSX" do
+    platform :osx
+    pod 'GHUnitOSX'
+end
