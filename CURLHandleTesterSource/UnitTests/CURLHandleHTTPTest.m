@@ -62,6 +62,33 @@ NSInteger const SECONDS_WAIT_FOR_CONNECTION_TO_COMPLETE = (NSInteger)0.25;
 }
 
 
+- (void)testHTTPGetOnlyFirstTwoBytes
+{
+    NSString *filename = @"Bear%20In%20Heaven%20-%20You%20Do%20You%20(Live%20on%20KEXP).mp4";
+    NSURL *source = [NSURL URLWithString:[NSString stringWithFormat:@"http://127.0.0.1/~%@/%@",NSUserName(),filename]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:source];
+    NSMutableDictionary *header = [NSMutableDictionary dictionaryWithDictionary:request.allHTTPHeaderFields];
+    [header setObject:@"bytes=0-1" forKey:@"Range"];
+    request.allHTTPHeaderFields = header;
+    
+    self.curlHandleDestinationPath = [self.CURLHandleDestinationDirectory stringByAppendingPathComponent:[filename stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    [request setShouldUseCurlHandle:YES];
+    [self getFileFromSiteWithNSURLConnection:request destination:self.curlHandleDestinationPath];
+    
+    GHAssertNil(self.error, @"Error occured whilst running the CURLHandle NSURLConnection: %@",self.error.description);
+    
+    self.vanillaConnectionDestinationPath = [self.VanillaConnectionDestinationDirectory stringByAppendingPathComponent:[filename stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    [request setShouldUseCurlHandle:NO];
+    [self getFileFromSiteWithNSURLConnection:request destination:self.vanillaConnectionDestinationPath];
+    
+    GHAssertNil(self.error, @"Error occured whilst running the vanilla NSURLConnection: %@",self.error.description);
+    
+    NSString *curlDestChecksum = [self getMD5FromFile:self.curlHandleDestinationPath];
+    NSString *vanillaDestChecksum = [self getMD5FromFile:self.vanillaConnectionDestinationPath];
+    GHAssertEqualStrings(vanillaDestChecksum, curlDestChecksum, @"The md5 checksum of the curl destination file does not match the vanilla destination file.");
+}
+
+
 #pragma mark NSURLConnection delegates
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
