@@ -24,18 +24,6 @@ static BOOL				sAllowsProxy = NO;		// by default, disallow proxy to be used./
 SCDynamicStoreRef	sSCDSRef = NULL;
 static NSString			*sProxyUserIDAndPassword = nil;
 
-
-@interface CURLResponse : NSHTTPURLResponse
-{
-@private
-    NSInteger       _statusCode;
-    NSDictionary    *_headerFields;
-}
-
-- (id)initWithURL:(NSURL *)URL statusCode:(NSInteger)statusCode headerString:(NSString *)headerString;
-
-@end
-
 @interface NSString ( CurlHTTPExtensions )
 
 - (NSString *) headerStatus;
@@ -726,12 +714,12 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
                         if (urlString)
                         {
                             NSURL *url = [[NSURL alloc] initWithString:urlString];
-                            if (url)
-                            {
-                                NSURLResponse *response = [[CURLResponse alloc] initWithURL:url
-                                                                                 statusCode:code
-                                                                               headerString:headerString];
+                            if (url) {
+                                NSDictionary *fields = [headerString allHTTPHeaderFields];
                                 
+                                NSString *HTTP_VERSION = @"HTTP/1.1";
+                                NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url statusCode:code HTTPVersion:HTTP_VERSION headerFields:fields];
+                        
                                 [[self delegate] handle:self didReceiveResponse:response];
                                 [response release];
                                 [url release];
@@ -1059,27 +1047,4 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
 	}
 	return result;
 }
-@end
-
-
-@implementation CURLResponse
-
-- (id)initWithURL:(NSURL *)URL statusCode:(NSInteger)statusCode headerString:(NSString *)headerString;
-{
-    NSDictionary *fields = [headerString allHTTPHeaderFields];
-    
-    if (self = [self initWithURL:URL
-                        MIMEType:[fields objectForKey:@"Content-Type"]
-           expectedContentLength:[[fields objectForKey:@"Content-Length"] integerValue]
-                textEncodingName:[fields objectForKey:@"Content-Encoding"]])
-    {
-        _statusCode = statusCode;
-        _headerFields = [fields copy];
-    }
-    return self;
-}
-
-- (NSInteger)statusCode; { return _statusCode; }
-- (NSDictionary *)allHeaderFields; { return _headerFields; }
-
 @end
