@@ -676,6 +676,37 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
 /*"	Continue the writing callback in Objective C; now we have our instance variables.
 "*/
 
+- (void)postHeader
+{
+    NSString *headerString = [[NSString alloc] initWithData:_headerBuffer encoding:NSASCIIStringEncoding];
+    [_headerBuffer setLength:0];
+    
+    long code;
+    if (curl_easy_getinfo(mCURL, CURLINFO_HTTP_CODE, &code) == CURLE_OK) {
+        char *urlBuffer;
+        if (curl_easy_getinfo(mCURL, CURLINFO_EFFECTIVE_URL, &urlBuffer) == CURLE_OK) {
+            NSString *urlString = [[NSString alloc] initWithUTF8String:urlBuffer];
+            if (urlString) {
+                NSURL *url = [[NSURL alloc] initWithString:urlString];
+                if (url) {
+                    NSDictionary *fields = [headerString allHTTPHeaderFields];
+                    
+                    NSString *HTTP_VERSION = @"HTTP/1.1";
+                    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url statusCode:code HTTPVersion:HTTP_VERSION headerFields:fields];
+                    
+                    [[self delegate] handle:self didReceiveResponse:response];
+                    [response release];
+                    [url release];
+                }
+                
+                [urlString release];
+            }
+            
+        }
+    }
+    [headerString release];
+}
+
 - (size_t) curlWritePtr:(void *)inPtr size:(size_t)inSize number:(size_t)inNumber isHeader:(BOOL)header;
 {
 	size_t written = inSize*inNumber;
@@ -694,46 +725,14 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
             if ([[self delegate] respondsToSelector:@selector(handle:didReceiveResponse:)])
             {
                 [_headerBuffer appendData:data];
+                NSString *headerLine = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+                if ([headerLine isEqualToString:@"\r\n"]) {
+                    [self postHeader];
+                }
             }
 		}
 		else
 		{
-            // Once the body starts arriving, we know we have the full header, so can report that
-            if ([_headerBuffer length])
-            {
-                NSString *headerString = [[NSString alloc] initWithData:_headerBuffer encoding:NSASCIIStringEncoding];
-                [_headerBuffer setLength:0];
-                
-                long code;
-                if (curl_easy_getinfo(mCURL, CURLINFO_HTTP_CODE, &code) == CURLE_OK)
-                {
-                    char *urlBuffer;
-                    if (curl_easy_getinfo(mCURL, CURLINFO_EFFECTIVE_URL, &urlBuffer) == CURLE_OK)
-                    {
-                        NSString *urlString = [[NSString alloc] initWithUTF8String:urlBuffer];
-                        if (urlString)
-                        {
-                            NSURL *url = [[NSURL alloc] initWithString:urlString];
-                            if (url) {
-                                NSDictionary *fields = [headerString allHTTPHeaderFields];
-                                
-                                NSString *HTTP_VERSION = @"HTTP/1.1";
-                                NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url statusCode:code HTTPVersion:HTTP_VERSION headerFields:fields];
-                        
-                                [[self delegate] handle:self didReceiveResponse:response];
-                                [response release];
-                                [url release];
-                            }
-                            
-                            [urlString release];
-                        }
-                        
-                    }
-                }
-				[headerString release];
-            }
-            
-            
             // Report regular body data
 			[[self delegate] handle:self didReceiveData:data];
 		}
