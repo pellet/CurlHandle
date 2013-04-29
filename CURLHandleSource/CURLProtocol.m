@@ -8,6 +8,12 @@
 
 #import "CURLProtocol.h"
 
+@interface CURLProtocol()
+
+@property BOOL isResponseSent;
+
+@end
+
 @implementation CURLProtocol
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request;
@@ -30,6 +36,7 @@
         NSError *error;
         if ([handle loadRequest:[self request] error:&error])
         {
+            assert(self.isResponseSent);
             [[self client] URLProtocolDidFinishLoading:self];
         }
         else
@@ -48,12 +55,19 @@
 
 - (void)handle:(CURLHandle *)handle didReceiveResponse:(NSURLResponse *)response;
 {
+    self.isResponseSent=YES;
     [[self client] URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
 }
 
 - (void)handle:(CURLHandle *)handle didReceiveData:(NSData *)data;
 {
     [[self client] URLProtocol:self didLoadData:data];
+}
+
+- (void)handle:(CURLHandle *)handle willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response
+{
+    self.isResponseSent=YES;
+    [self.client URLProtocol:self wasRedirectedToRequest:request redirectResponse:response];
 }
 
 @end

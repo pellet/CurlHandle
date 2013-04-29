@@ -39,6 +39,11 @@ static NSString			*sProxyUserIDAndPassword = nil;
 
 
 @interface CURLHandle ()
+
+#pragma mark - @@@BP Private member 
+@property (retain) NSURLRequest *request;
+#pragma mark - @@@BP
+
 - (size_t) curlWritePtr:(void *)inPtr size:(size_t)inSize number:(size_t)inNumber isHeader:(BOOL)header;
 - (size_t) curlReadPtr:(void *)inPtr size:(size_t)inSize number:(size_t)inNumber;
 @end
@@ -277,6 +282,10 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
 
 - (BOOL)loadRequest:(NSURLRequest *)request error:(NSError **)error;
 {
+#pragma mark - @@@BP Set the request member here.
+    self.request = request;
+#pragma mark - @@@BP
+    
     NSAssert(_executing == NO, @"CURLHandle instances may not be accessed on multiple threads at once, or re-entrantly");
     _executing = YES;
     
@@ -675,38 +684,6 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
 
 /*"	Continue the writing callback in Objective C; now we have our instance variables.
 "*/
-
-- (void)postHeader
-{
-    NSString *headerString = [[NSString alloc] initWithData:_headerBuffer encoding:NSASCIIStringEncoding];
-    [_headerBuffer setLength:0];
-    
-    long code;
-    if (curl_easy_getinfo(mCURL, CURLINFO_HTTP_CODE, &code) == CURLE_OK) {
-        char *urlBuffer;
-        if (curl_easy_getinfo(mCURL, CURLINFO_EFFECTIVE_URL, &urlBuffer) == CURLE_OK) {
-            NSString *urlString = [[NSString alloc] initWithUTF8String:urlBuffer];
-            if (urlString) {
-                NSURL *url = [[NSURL alloc] initWithString:urlString];
-                if (url) {
-                    NSDictionary *fields = [headerString allHTTPHeaderFields];
-                    
-                    NSString *HTTP_VERSION = @"HTTP/1.1";
-                    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url statusCode:code HTTPVersion:HTTP_VERSION headerFields:fields];
-                    
-                    [[self delegate] handle:self didReceiveResponse:response];
-                    [response release];
-                    [url release];
-                }
-                
-                [urlString release];
-            }
-            
-        }
-    }
-    [headerString release];
-}
-
 - (size_t) curlWritePtr:(void *)inPtr size:(size_t)inSize number:(size_t)inNumber isHeader:(BOOL)header;
 {
 	size_t written = inSize*inNumber;
@@ -766,6 +743,53 @@ static int curlDebugFunction(CURL *mCURL, curl_infotype infoType, char *info, si
     
     return result;
 }
+
+#pragma mark - @@@BP Function to handle headers
+- (void)postHeader
+{
+    NSString *headerString = [[NSString alloc] initWithData:_headerBuffer encoding:NSASCIIStringEncoding];
+    [_headerBuffer setLength:0];
+    
+    long code;
+    if (curl_easy_getinfo(mCURL, CURLINFO_HTTP_CODE, &code) == CURLE_OK) {
+        char *urlBuffer;
+        if (curl_easy_getinfo(mCURL, CURLINFO_EFFECTIVE_URL, &urlBuffer) == CURLE_OK) {
+            NSString *urlString = [[NSString alloc] initWithUTF8String:urlBuffer];
+            if (urlString) {
+                NSURL *url = [[NSURL alloc] initWithString:urlString];
+                if (url) {
+                    NSDictionary *fields = [headerString allHTTPHeaderFields];
+                    NSString *HTTP_VERSION = @"HTTP/1.1";
+                    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url statusCode:code HTTPVersion:HTTP_VERSION headerFields:fields];
+                    
+                    if (302==code) {
+                        NSString *redirectedAddress = [fields objectForKey:@"Location"];
+                        NSURL *redirectedURL = [NSURL URLWithString:redirectedAddress];
+                        
+                        NSMutableURLRequest *redirectedRequest = [NSMutableURLRequest requestWithURL:redirectedURL];
+                        NSMutableDictionary *redirectedRequestHeaders = [NSMutableDictionary dictionaryWithDictionary:self.request.allHTTPHeaderFields];
+                        [redirectedRequestHeaders setValue:redirectedURL.host forKey:@"Host"];
+                        redirectedRequest.allHTTPHeaderFields = redirectedRequestHeaders;
+                        
+#pragma mark - Alert the delegate of the redirect with something close to what curl will be using as the redirected request.
+                        [[self delegate] handle:self willSendRequest:redirectedRequest redirectResponse:response];
+                        
+                    } else {
+                        [[self delegate] handle:self didReceiveResponse:response];
+                    }
+                    
+                    [response release];
+                    [url release];
+                }
+                
+                [urlString release];
+            }
+            
+        }
+    }
+    [headerString release];
+}
+#pragma mark - @@@BP
 
 @synthesize delegate = _delegate;
 

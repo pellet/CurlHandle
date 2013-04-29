@@ -82,6 +82,10 @@ extern NSString * const CURLSHcodeErrorDomain;
 
 - (void)handle:(CURLHandle *)handle didReceiveDebugInformation:(NSString *)string ofType:(curl_infotype)type;
 
+#pragma mark - @@@BP For handling redirects.
+- (void)handle:(CURLHandle *)handle willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response;
+#pragma mark - @@@BP
+
 @end
 
 
