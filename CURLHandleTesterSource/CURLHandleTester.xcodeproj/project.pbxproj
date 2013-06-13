@@ -34,7 +34,6 @@
 		EB6BE1871726770800D7081E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE1861726770800D7081E /* UIKit.framework */; };
 		EB6BE189172679A200D7081E /* libCURLHandle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4EB54716D63B69001ED971 /* libCURLHandle-iOS.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EB6BE18B172679D700D7081E /* libcurl-simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18A172679D700D7081E /* libcurl-simulator.a */; settings = {ATTRIBUTES = (Weak, ); }; };
-		EB6BE18D17267A2400D7081E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18C17267A2400D7081E /* libz.dylib */; };
 		EB6BE18F17267A2E00D7081E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE18E17267A2E00D7081E /* Security.framework */; };
 		EB6BE19117267A7700D7081E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE19017267A7700D7081E /* CFNetwork.framework */; };
 		EB6BE19317267AB100D7081E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE19217267AB100D7081E /* CoreGraphics.framework */; };
@@ -161,6 +160,7 @@
 		EB6BE19217267AB100D7081E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		EBAD95C916DDCF5B00C638F7 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = ../CURLHandleSource/libcares.dylib; sourceTree = "<group>"; };
 		EBAE8A691731E27C00C1B714 /* libcurl-device.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurl-device.a"; path = "../ioscurl/libcurl-device.a"; sourceTree = "<group>"; };
+		EBB20B6E1767667F00BCFC0A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		EBB61EFC1726616C00D3E829 /* CURLHandleUnitTests-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CURLHandleUnitTests-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB61EFD1726616C00D3E829 /* CURLHandleUnitTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CURLHandleUnitTests-iOS-Info.plist"; path = "/Users/eggers/freshfromrepo/vidhog/External/CurlHandle/CURLHandleTesterSource/CURLHandleUnitTests-iOS-Info.plist"; sourceTree = "<absolute>"; };
 		EBB61F09172666D500D3E829 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcurl.dylib; sourceTree = DEVELOPER_DIR; };
@@ -196,7 +196,6 @@
 				EB6BE19317267AB100D7081E /* CoreGraphics.framework in Frameworks */,
 				EB6BE19117267A7700D7081E /* CFNetwork.framework in Frameworks */,
 				EB6BE18F17267A2E00D7081E /* Security.framework in Frameworks */,
-				EB6BE18D17267A2400D7081E /* libz.dylib in Frameworks */,
 				EB6BE189172679A200D7081E /* libCURLHandle-iOS.a in Frameworks */,
 				EB6BE1871726770800D7081E /* UIKit.framework in Frameworks */,
 				ADED29BEF4FA435CBFDACB73 /* libPods-CURLHandleUnitTests-iOS.a in Frameworks */,
@@ -307,6 +306,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB20B6E1767667F00BCFC0A /* libz.dylib */,
 				EBB61F0B172667D000D3E829 /* Podfile */,
 				EB6BE1881726774F00D7081E /* iOS */,
 				EB4EB54D16D63C68001ED971 /* Mac */,
@@ -746,6 +746,7 @@
 					"$(SRCROOT)/Pods/build/Debug-iphoneos",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "CURLHandleUnitTests-iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,6 +778,7 @@
 					"$(SRCROOT)/Pods/build/Debug-iphoneos",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "CURLHandleUnitTests-iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
