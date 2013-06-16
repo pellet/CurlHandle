@@ -25,7 +25,6 @@
 		EB668C9616D3609800FC6A77 /* CURLFTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 275707681503E21C00363512 /* CURLFTPSession.m */; };
 		EB668C9A16D36C0800FC6A77 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277D77E1160380AF00906915 /* CFNetwork.framework */; };
 		EB6BE17A172672A100D7081E /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BE179172672A100D7081E /* libcurl.dylib */; };
-		EBB20B74176767E400BCFC0A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB20B73176767E400BCFC0A /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB20B74176767E400BCFC0A /* libz.dylib in Frameworks */,
 				EB28789016D38B7300C07756 /* SystemConfiguration.framework in Frameworks */,
 				EB28788C16D38B3400C07756 /* CFNetwork.framework in Frameworks */,
 				EB28788A16D38B3000C07756 /* Security.framework in Frameworks */,
