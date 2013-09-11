@@ -19,8 +19,8 @@
 		E0DF7DFF1645F9C0005C421F /* ICViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DF7DFE1645F9C0005C421F /* ICViewController.m */; };
 		E0DF7E021645F9C0005C421F /* ICViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DF7E001645F9C0005C421F /* ICViewController_iPhone.xib */; };
 		E0DF7E051645F9C0005C421F /* ICViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DF7E031645F9C0005C421F /* ICViewController_iPad.xib */; };
-		E0DF7E111645FBB0005C421F /* libcurl-device.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E0F1645FBB0005C421F /* libcurl-device.a */; };
-		E0DF7E121645FBB0005C421F /* libcurl-simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E101645FBB0005C421F /* libcurl-simulator.a */; };
+		E0DF7E111645FBB0005C421F /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E0F1645FBB0005C421F /* libcurl.a */; };
+		E0DF7E121645FBB0005C421F /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E101645FBB0005C421F /* libcurl.a */; };
 		E0DF7E151645FC5D005C421F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E131645FC5D005C421F /* CFNetwork.framework */; };
 		E0DF7E161645FC5D005C421F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E141645FC5D005C421F /* Security.framework */; };
 		E0DF7E181645FC87005C421F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DF7E171645FC87005C421F /* libz.dylib */; };
@@ -45,8 +45,8 @@
 		E0DF7DFE1645F9C0005C421F /* ICViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICViewController.m; sourceTree = "<group>"; };
 		E0DF7E011645F9C0005C421F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ICViewController_iPhone.xib; sourceTree = "<group>"; };
 		E0DF7E041645F9C0005C421F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ICViewController_iPad.xib; sourceTree = "<group>"; };
-		E0DF7E0F1645FBB0005C421F /* libcurl-device.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcurl-device.a"; sourceTree = "<group>"; };
-		E0DF7E101645FBB0005C421F /* libcurl-simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcurl-simulator.a"; sourceTree = "<group>"; };
+		E0DF7E0F1645FBB0005C421F /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/device/libcurl.a; sourceTree = "<group>"; };
+		E0DF7E101645FBB0005C421F /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/simulator/libcurl.a; sourceTree = "<group>"; };
 		E0DF7E131645FC5D005C421F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E0DF7E141645FC5D005C421F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E0DF7E171645FC87005C421F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -61,8 +61,8 @@
 				E0DF7DE61645F9BF005C421F /* UIKit.framework in Frameworks */,
 				E0DF7DE81645F9BF005C421F /* Foundation.framework in Frameworks */,
 				E0DF7DEA1645F9BF005C421F /* CoreGraphics.framework in Frameworks */,
-				E0DF7E111645FBB0005C421F /* libcurl-device.a in Frameworks */,
-				E0DF7E121645FBB0005C421F /* libcurl-simulator.a in Frameworks */,
+				E0DF7E111645FBB0005C421F /* libcurl.a in Frameworks */,
+				E0DF7E121645FBB0005C421F /* libcurl.a in Frameworks */,
 				E0DF7E151645FC5D005C421F /* CFNetwork.framework in Frameworks */,
 				E0DF7E161645FC5D005C421F /* Security.framework in Frameworks */,
 				E0DF7E181645FC87005C421F /* libz.dylib in Frameworks */,
@@ -92,8 +92,8 @@
 		E0DF7DE41645F9BF005C421F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0DF7E0F1645FBB0005C421F /* libcurl-device.a */,
-				E0DF7E101645FBB0005C421F /* libcurl-simulator.a */,
+				E0DF7E0F1645FBB0005C421F /* libcurl.a */,
+				E0DF7E101645FBB0005C421F /* libcurl.a */,
 				E0DF7DE51645F9BF005C421F /* UIKit.framework */,
 				E0DF7DE71645F9BF005C421F /* Foundation.framework */,
 				E0DF7DE91645F9BF005C421F /* CoreGraphics.framework */,
@@ -305,6 +305,14 @@
 				GCC_PREFIX_HEADER = "iOScURL/iOScURL-Prefix.pch";
 				INFOPLIST_FILE = "iOScURL/iOScURL-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
